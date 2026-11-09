@@ -119,7 +119,7 @@ jobs:
                   zinfo = zipfile.ZipInfo(it.filename, it.date_time)
                   zinfo.external_attr = it.external_attr
                   zo.writestr(zinfo, zi.read(it.filename),
-                              zipfile.ZIP_STORED if stored else zipfile.ZIP_DEFLATED)
+                              zipfile.ZIP_STORED if stored else it.compress_type)
           PY
           mv work/normalized.apk work/final_unsigned.apk
           unzip -lv work/final_unsigned.apk | grep -E "lib/|resources.arsc|classes[0-9]*.dex" || true
