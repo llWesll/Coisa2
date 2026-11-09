@@ -1,158 +1,166 @@
-package com.mod;
+// libmodmenu.so - resolve simbolos EXPORTADOS de libgame.so (Inotia 4 1.4.0) via dlsym.
+#include <jni.h>
+#include <dlfcn.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <string>
+#include <string.h>
+#include <android/log.h>
 
-import android.app.Activity;
-import android.graphics.Color;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+static void* H() {
+    static void* h = nullptr;
+    if (!h) h = dlopen("libgame.so", RTLD_NOW | RTLD_NOLOAD);
+    return h;
+}
+template <class T> static T sym(const char* n) { void* h = H(); return h ? (T)dlsym(h, n) : nullptr; }
 
-/** Float mod menu para Inotia 4 1.4.0. Sem permissao de overlay: usa addContentView da Activity. */
-public class ModMenu {
-    static { try { System.loadLibrary("modmenu"); } catch (Throwable t) { } }
-
-    public static native boolean nativeReady();
-    public static native long nativeGetGems();
-    public static native void nativeSetGems(long v);
-    public static native boolean nativeAddMoney(long v);
-    public static native long nativeGetMoney();
-    public static native String nativeDump();
-    public static native int nativeCashCount();
-    public static native long nativeCashEntry(int i);
-    public static native int nativeAddItem(int idx, int count);
-    public static native boolean nativeSave();
-
-    private static int cashPos = 0;
-
-    private static boolean started = false;
-
-    public static void start(final Activity a) {
-        if (started) return;
-        started = true;
-        a.getWindow().getDecorView().postDelayed(new Runnable() {
-            public void run() { try { build(a); } catch (Throwable t) { started = false; } }
-        }, 4000);
+static void hexdump(std::string& out, const char* label, const void* p, size_t n) {
+    char b[16];
+    out += label; out += ":\n";
+    if (!p) { out += "  (null)\n"; return; }
+    const uint8_t* q = (const uint8_t*)p;
+    for (size_t i = 0; i < n; i++) {
+        snprintf(b, sizeof b, "%02x", q[i]);
+        out += b;
+        out += ((i + 1) % 32 == 0) ? "\n" : " ";
     }
+    out += "\n";
+}
 
-    private static int dp(Activity a, int v) { return (int) (v * a.getResources().getDisplayMetrics().density); }
-
-    private static Button btn(Activity a, String t, View.OnClickListener l) {
-        Button b = new Button(a); b.setText(t); b.setTextSize(12); b.setOnClickListener(l); return b;
-    }
-
-    private static void addCashRow(final Activity a, LinearLayout panel) {
-        final TextView ci = new TextView(a);
-        ci.setTextColor(Color.WHITE);
-        ci.setTextSize(11);
-        panel.addView(ci);
-        final Runnable rf = new Runnable() { public void run() {
-            int n = nativeCashCount();
-            if (n <= 0) { ci.setText("cash: catalogo indisponivel (" + n + ")"); return; }
-            long e = nativeCashEntry(cashPos);
-            ci.setText("cash " + (cashPos + 1) + "/" + n + "  item=" + (e & 0xFFFF) + "  qtd=" + ((e >> 16) & 0xFF)
-                + "  preco=" + ((e >> 24) & 0xFFFF) + "  grupo=" + ((e >> 40) & 0xFF));
-        }};
-        LinearLayout row = new LinearLayout(a);
-        row.setOrientation(LinearLayout.HORIZONTAL);
-        row.addView(btn(a, "<", new View.OnClickListener() { public void onClick(View v) {
-            int n = nativeCashCount(); if (n > 0) { cashPos = (cashPos + n - 1) % n; rf.run(); } }}));
-        row.addView(btn(a, ">", new View.OnClickListener() { public void onClick(View v) {
-            int n = nativeCashCount(); if (n > 0) { cashPos = (cashPos + 1) % n; rf.run(); } }}));
-        row.addView(btn(a, "Add", new View.OnClickListener() { public void onClick(View v) {
-            long e = nativeCashEntry(cashPos); if (e < 0) return;
-            int got = nativeAddItem((int) (e & 0xFFFF), (int) ((e >> 16) & 0xFF));
-            Toast.makeText(a, "entraram " + got, Toast.LENGTH_SHORT).show(); }}));
-        panel.addView(row);
-        panel.addView(btn(a, "Salvar jogo (SAVE_Save)", new View.OnClickListener() { public void onClick(View v) {
-            Toast.makeText(a, nativeSave() ? "salvo" : "falhou", Toast.LENGTH_SHORT).show(); }}));
-        rf.run();
-    }
-
-    private static void build(final Activity a) {
-        final FrameLayout root = new FrameLayout(a);
-
-        final LinearLayout panel = new LinearLayout(a);
-        panel.setOrientation(LinearLayout.VERTICAL);
-        panel.setBackgroundColor(0xE6202030);
-        panel.setPadding(dp(a, 10), dp(a, 10), dp(a, 10), dp(a, 10));
-        panel.setVisibility(View.GONE);
-
-        final TextView info = new TextView(a);
-        info.setTextColor(Color.WHITE);
-        info.setTextSize(13);
-        panel.addView(info);
-
-        final Runnable refresh = new Runnable() { public void run() {
-            info.setText(nativeReady()
-                ? ("Gems: " + nativeGetGems() + "   Gold: " + nativeGetMoney())
-                : "libgame.so nao encontrada / simbolos ausentes");
-        }};
-
-        panel.addView(btn(a, "+100 Gems", new View.OnClickListener() { public void onClick(View v) {
-            nativeSetGems(nativeGetGems() + 100); refresh.run(); }}));
-        panel.addView(btn(a, "+1000 Gems", new View.OnClickListener() { public void onClick(View v) {
-            nativeSetGems(nativeGetGems() + 1000); refresh.run(); }}));
-        panel.addView(btn(a, "+10000 Gems", new View.OnClickListener() { public void onClick(View v) {
-            nativeSetGems(nativeGetGems() + 10000); refresh.run(); }}));
-        panel.addView(btn(a, "+100000 Gold", new View.OnClickListener() { public void onClick(View v) {
-            nativeAddMoney(100000); refresh.run(); }}));
-
-        panel.addView(btn(a, "+1000000 Gold", new View.OnClickListener() { public void onClick(View v) {
-            nativeAddMoney(1000000); refresh.run(); }}));
-        addCashRow(a, panel);
-        panel.addView(btn(a, "Salvar dump (diagnostico)", new View.OnClickListener() { public void onClick(View v) {
-            try {
-                java.io.File dir = a.getExternalFilesDir(null);
-                java.io.File f = new java.io.File(dir, "modmenu_dump.txt");
-                java.io.FileOutputStream o = new java.io.FileOutputStream(f);
-                o.write(nativeDump().getBytes("UTF-8")); o.close();
-                Toast.makeText(a, "Salvo em " + f.getAbsolutePath(), Toast.LENGTH_LONG).show();
-            } catch (Throwable t) { Toast.makeText(a, "Falhou: " + t, Toast.LENGTH_LONG).show(); }
-        }}));
-
-        FrameLayout.LayoutParams pp = new FrameLayout.LayoutParams(dp(a, 230), ViewGroup.LayoutParams.WRAP_CONTENT);
-        pp.leftMargin = dp(a, 70); pp.topMargin = dp(a, 20);
-        root.addView(panel, pp);
-
-        final Button fab = new Button(a);
-        fab.setText("MOD");
-        fab.setTextSize(11);
-        fab.setBackgroundColor(0xCCFF6600);
-        fab.setTextColor(Color.WHITE);
-        FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(dp(a, 56), dp(a, 56));
-        fp.leftMargin = dp(a, 8); fp.topMargin = dp(a, 20);
-        root.addView(fab, fp);
-
-        fab.setOnTouchListener(new View.OnTouchListener() {
-            float dx, dy; boolean moved;
-            public boolean onTouch(View v, MotionEvent e) {
-                FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) v.getLayoutParams();
-                switch (e.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        dx = e.getRawX() - lp.leftMargin; dy = e.getRawY() - lp.topMargin; moved = false; return true;
-                    case MotionEvent.ACTION_MOVE:
-                        lp.leftMargin = (int) (e.getRawX() - dx); lp.topMargin = (int) (e.getRawY() - dy);
-                        moved = true; v.setLayoutParams(lp);
-                        FrameLayout.LayoutParams q = (FrameLayout.LayoutParams) panel.getLayoutParams();
-                        q.leftMargin = lp.leftMargin + dp(a, 62); q.topMargin = lp.topMargin; panel.setLayoutParams(q);
-                        return true;
-                    case MotionEvent.ACTION_UP:
-                        if (!moved) {
-                            panel.setVisibility(panel.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-                            refresh.run();
-                        }
-                        return true;
-                }
-                return false;
-            }
-        });
-
-        a.addContentView(root, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        root.setClickable(false);
-        root.setFocusable(false);
+// Tabelas do jogo: <NOME>_nRecordCount (uint16), <NOME>_nRecordSize (uint8), <NOME>_pData (ponteiro)
+static void dumpTable(std::string& out, const char* name, int maxRec) {
+    std::string a = std::string(name) + "_nRecordCount";
+    std::string b = std::string(name) + "_nRecordSize";
+    std::string c = std::string(name) + "_pData";
+    auto cnt = sym<uint16_t*>(a.c_str());
+    auto sz = sym<uint8_t*>(b.c_str());
+    auto pd = sym<uint8_t**>(c.c_str());
+    char buf[128];
+    snprintf(buf, sizeof buf, "== %s count=%d size=%d\n", name, cnt ? *cnt : -1, sz ? *sz : -1);
+    out += buf;
+    if (!cnt || !sz || !pd || !*pd || *sz == 0) return;
+    int n = *cnt < maxRec ? *cnt : maxRec;
+    for (int i = 0; i < n; i++) {
+        snprintf(buf, sizeof buf, "[%d]", i);
+        hexdump(out, buf, *pd + (size_t)i * *sz, *sz);
     }
 }
+
+// ---- itens cash: replica NetworkStore_AddItem (CreateItem -> qtd nos bits 31..25 de ITEM+0x10 -> INVEN_SaveItem)
+// ITEM tem 40 bytes; +0x08 u16 bits 15..6 = indice no ITEMDATABASE; ITEMDATABASE rec[6] bit0 = empilhavel (max 99).
+static bool stackable(int idx) {
+    auto pd = sym<uint8_t**>("ITEMDATABASE_pData");
+    auto sz = sym<uint8_t*>("ITEMDATABASE_nRecordSize");
+    if (!pd || !*pd || !sz) return false;
+    return ((*pd)[(size_t)(*sz) * (size_t)idx + 6] & 1) != 0;
+}
+
+static bool addOne(int idx, int cnt) {
+    auto create = sym<void* (*)(int)>("ITEMSYSTEM_CreateItem");
+    auto saveItem = sym<bool (*)(void*)>("INVEN_SaveItem");
+    auto freeItem = sym<void (*)(void*)>("ITEMPOOL_Free");
+    if (!create || !saveItem || !freeItem) return false;
+    uint8_t* item = (uint8_t*)create(idx);
+    if (!item) return false;
+    if (stackable(idx)) {
+        uint32_t v; memcpy(&v, item + 0x10, 4);
+        v = (v & ~(0x7Fu << 25)) | ((uint32_t)(cnt & 0x7F) << 25);
+        int64_t w = (int32_t)v;
+        memcpy(item + 0x10, &w, 8);
+    }
+    if (!saveItem(item)) { freeItem(item); return false; } // mochila cheia
+    return true; // se juntou numa pilha existente o proprio jogo libera 'item'
+}
+
+extern "C" {
+
+JNIEXPORT jboolean JNICALL Java_com_mod_ModMenu_nativeReady(JNIEnv*, jclass) {
+    return sym<void*>("g_gemCount") != nullptr;
+}
+
+JNIEXPORT jlong JNICALL Java_com_mod_ModMenu_nativeGetGems(JNIEnv*, jclass) {
+    auto p = sym<int64_t*>("g_gemCount");
+    return p ? (jlong)*p : -1;
+}
+
+JNIEXPORT void JNICALL Java_com_mod_ModMenu_nativeSetGems(JNIEnv*, jclass, jlong v) {
+    if (v < 0) v = 0;
+    if (v > 999999999) v = 999999999;
+    if (auto p = sym<int64_t*>("g_gemCount")) *p = v;
+    if (auto q = sym<int64_t*>("NetworkStore_i32Gem")) *q = v; // espelho usado pela loja
+}
+
+// INVEN_AddMoney(uint64 qtd) -> bool (assinatura confirmada no disassembly).
+JNIEXPORT jboolean JNICALL Java_com_mod_ModMenu_nativeAddMoney(JNIEnv*, jclass, jlong v) {
+    auto f = sym<int (*)(uint64_t)>("INVEN_AddMoney");
+    return f ? (jboolean)(f((uint64_t)v) & 1) : JNI_FALSE;
+}
+
+JNIEXPORT jlong JNICALL Java_com_mod_ModMenu_nativeGetMoney(JNIEnv*, jclass) {
+    auto f = sym<int64_t (*)()>("INVEN_GetMoney");
+    return f ? (jlong)f() : -1;
+}
+
+JNIEXPORT jint JNICALL Java_com_mod_ModMenu_nativeCashCount(JNIEnv*, jclass) {
+    auto c = sym<uint16_t*>("CASHITEMBASE_nRecordCount");
+    return c ? (jint)*c : -1;
+}
+
+// entrada i do catalogo cash: indice | qtd<<16 | preco<<24 | grupo<<40 (layout deduzido do dump)
+JNIEXPORT jlong JNICALL Java_com_mod_ModMenu_nativeCashEntry(JNIEnv*, jclass, jint i) {
+    auto c = sym<uint16_t*>("CASHITEMBASE_nRecordCount");
+    auto sz = sym<uint8_t*>("CASHITEMBASE_nRecordSize");
+    auto pd = sym<uint8_t**>("CASHITEMBASE_pData");
+    if (!c || !sz || !pd || !*pd || *sz < 8 || i < 0 || i >= (jint)*c) return -1;
+    const uint8_t* r = *pd + (size_t)(*sz) * (size_t)i;
+    jlong id = r[0] | (r[1] << 8), price = r[3] | (r[4] << 8);
+    return id | ((jlong)r[2] << 16) | (price << 24) | ((jlong)r[7] << 40);
+}
+
+// devolve quantas unidades entraram na mochila
+JNIEXPORT jint JNICALL Java_com_mod_ModMenu_nativeAddItem(JNIEnv*, jclass, jint idx, jint count) {
+    auto n = sym<uint16_t*>("ITEMDATABASE_nRecordCount");
+    if (!n || idx < 0 || idx >= (jint)*n || count < 1) return 0;
+    int done = 0;
+    if (stackable(idx)) {
+        while (done < count) {
+            int c = count - done > 99 ? 99 : count - done;
+            if (!addOne(idx, c)) break;
+            done += c;
+        }
+    } else {
+        while (done < count && done < 20) { if (!addOne(idx, 1)) break; done++; }
+    }
+    __android_log_print(ANDROID_LOG_INFO, "ModMenu", "AddItem idx=%d pedido=%d entrou=%d", idx, count, done);
+    return done;
+}
+
+// SAVE_Save(): o jogo chama isso logo depois de uma compra
+JNIEXPORT jboolean JNICALL Java_com_mod_ModMenu_nativeSave(JNIEnv*, jclass) {
+    auto f = sym<bool (*)()>("SAVE_Save");
+    return f ? (jboolean)f() : JNI_FALSE;
+}
+
+// Diagnostico: despeja tabelas de itens e o inventario atual em texto, para descobrir
+// o formato do item e montar o "adicionar item cash" com seguranca na proxima rodada.
+JNIEXPORT jstring JNICALL Java_com_mod_ModMenu_nativeDump(JNIEnv* env, jclass) {
+    std::string out;
+    char b[160];
+    out += "# Inotia4 dump\n";
+    dumpTable(out, "CASHITEMBASE", 64);
+    dumpTable(out, "CASHITEMGROUPBASE", 12);
+    dumpTable(out, "ITEMDATABASE", 12);
+    hexdump(out, "INVEN_pItem (768 bytes)", sym<void*>("INVEN_pItem"), 768);
+    hexdump(out, "INVEN_pBagSlot (48 bytes)", sym<void*>("INVEN_pBagSlot"), 48);
+    const char* vars[] = {"NetworkStore_i32BuyItemIndex", "NetworkStore_i32BuyItemType",
+                          "NetworkStore_i32UIInAppItemID", "NetworkStore_i32UIInAppItemPrice",
+                          "NetworkStore_i32BuyProductIndex", "NetworkStore_i32Gem", "g_gemCount"};
+    for (auto v : vars) {
+        auto p = sym<int64_t*>(v);
+        snprintf(b, sizeof b, "%s = %lld\n", v, p ? (long long)*p : -1LL);
+        out += b;
+    }
+    return env->NewStringUTF(out.c_str());
+}
+
+} // extern "C"
