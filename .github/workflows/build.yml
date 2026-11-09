@@ -104,6 +104,26 @@ jobs:
         if: ${{ !inputs.with_mod }}
         run: cp work/merged.apk work/final_unsigned.apk
 
+      - name: Normalizar zip (libs e resources.arsc sem compressao, sem duplicatas)
+        run: |
+          python3 - <<'PY'
+          import zipfile
+          src, dst = 'work/final_unsigned.apk', 'work/normalized.apk'
+          seen = set()
+          with zipfile.ZipFile(src) as zi, zipfile.ZipFile(dst, 'w') as zo:
+              for it in zi.infolist():
+                  if it.is_dir() or it.filename in seen:
+                      continue
+                  seen.add(it.filename)
+                  stored = it.filename.endswith('.so') or it.filename == 'resources.arsc'
+                  zinfo = zipfile.ZipInfo(it.filename, it.date_time)
+                  zinfo.external_attr = it.external_attr
+                  zo.writestr(zinfo, zi.read(it.filename),
+                              zipfile.ZIP_STORED if stored else zipfile.ZIP_DEFLATED)
+          PY
+          mv work/normalized.apk work/final_unsigned.apk
+          unzip -lv work/final_unsigned.apk | grep -E "lib/|resources.arsc|classes[0-9]*.dex" || true
+
       - name: Alinhar e assinar
         run: |
           "$BT/zipalign" -p -f 4 work/final_unsigned.apk work/aligned.apk
