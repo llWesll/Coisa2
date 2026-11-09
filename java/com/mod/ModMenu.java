@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,8 @@ public class ModMenu {
     private static int dp(Activity a, int v) { return (int) (v * a.getResources().getDisplayMetrics().density); }
 
     private static Button btn(Activity a, String t, View.OnClickListener l) {
-        Button b = new Button(a); b.setText(t); b.setTextSize(12); b.setOnClickListener(l); return b;
+        Button b = new Button(a); b.setText(t); b.setTextSize(12); b.setMinWidth(0); b.setMinimumWidth(0);
+        b.setOnClickListener(l); return b;
     }
 
     private static void addCashRow(final Activity a, LinearLayout panel) {
@@ -79,7 +81,6 @@ public class ModMenu {
         panel.setOrientation(LinearLayout.VERTICAL);
         panel.setBackgroundColor(0xE6202030);
         panel.setPadding(dp(a, 10), dp(a, 10), dp(a, 10), dp(a, 10));
-        panel.setVisibility(View.GONE);
 
         final TextView info = new TextView(a);
         info.setTextColor(Color.WHITE);
@@ -114,9 +115,13 @@ public class ModMenu {
             } catch (Throwable t) { Toast.makeText(a, "Falhou: " + t, Toast.LENGTH_LONG).show(); }
         }}));
 
-        FrameLayout.LayoutParams pp = new FrameLayout.LayoutParams(dp(a, 230), ViewGroup.LayoutParams.WRAP_CONTENT);
+        final ScrollView sv = new ScrollView(a);
+        sv.addView(panel);
+        sv.setVisibility(View.GONE);
+        int maxH = a.getResources().getDisplayMetrics().heightPixels - dp(a, 40);
+        FrameLayout.LayoutParams pp = new FrameLayout.LayoutParams(dp(a, 230), maxH);
         pp.leftMargin = dp(a, 70); pp.topMargin = dp(a, 20);
-        root.addView(panel, pp);
+        root.addView(sv, pp);
 
         final Button fab = new Button(a);
         fab.setText("MOD");
@@ -137,13 +142,17 @@ public class ModMenu {
                     case MotionEvent.ACTION_MOVE:
                         lp.leftMargin = (int) (e.getRawX() - dx); lp.topMargin = (int) (e.getRawY() - dy);
                         moved = true; v.setLayoutParams(lp);
-                        FrameLayout.LayoutParams q = (FrameLayout.LayoutParams) panel.getLayoutParams();
-                        q.leftMargin = lp.leftMargin + dp(a, 62); q.topMargin = lp.topMargin; panel.setLayoutParams(q);
+                        FrameLayout.LayoutParams q = (FrameLayout.LayoutParams) sv.getLayoutParams();
+                        q.leftMargin = lp.leftMargin + dp(a, 62); q.topMargin = lp.topMargin; sv.setLayoutParams(q);
                         return true;
                     case MotionEvent.ACTION_UP:
                         if (!moved) {
-                            panel.setVisibility(panel.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-                            refresh.run();
+                            try {
+                                sv.setVisibility(sv.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+                                refresh.run();
+                            } catch (Throwable t) {
+                                Toast.makeText(a, "Erro no menu: " + t, Toast.LENGTH_LONG).show();
+                            }
                         }
                         return true;
                 }
