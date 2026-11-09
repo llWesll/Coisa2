@@ -7,6 +7,3 @@
 
 Teste de sanidade: rode com `with_mod = false`. Se esse APK ja fechar sozinho, o problema e a
 verificacao de integridade (Hercules), nao o mod.
-
-No menu, "Salvar dump" cria `Android/data/<pacote>/files/modmenu_dump.txt`: envie para continuar
-o recurso de itens cash.
