@@ -21,6 +21,12 @@ public class ModMenu {
     public static native boolean nativeAddMoney(long v);
     public static native long nativeGetMoney();
     public static native String nativeDump();
+    public static native int nativeCashCount();
+    public static native long nativeCashEntry(int i);
+    public static native int nativeAddItem(int idx, int count);
+    public static native boolean nativeSave();
+
+    private static int cashPos = 0;
 
     private static boolean started = false;
 
@@ -36,6 +42,34 @@ public class ModMenu {
 
     private static Button btn(Activity a, String t, View.OnClickListener l) {
         Button b = new Button(a); b.setText(t); b.setTextSize(12); b.setOnClickListener(l); return b;
+    }
+
+    private static void addCashRow(final Activity a, LinearLayout panel) {
+        final TextView ci = new TextView(a);
+        ci.setTextColor(Color.WHITE);
+        ci.setTextSize(11);
+        panel.addView(ci);
+        final Runnable rf = new Runnable() { public void run() {
+            int n = nativeCashCount();
+            if (n <= 0) { ci.setText("cash: catalogo indisponivel (" + n + ")"); return; }
+            long e = nativeCashEntry(cashPos);
+            ci.setText("cash " + (cashPos + 1) + "/" + n + "  item=" + (e & 0xFFFF) + "  qtd=" + ((e >> 16) & 0xFF)
+                + "  preco=" + ((e >> 24) & 0xFFFF) + "  grupo=" + ((e >> 40) & 0xFF));
+        }};
+        LinearLayout row = new LinearLayout(a);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.addView(btn(a, "<", new View.OnClickListener() { public void onClick(View v) {
+            int n = nativeCashCount(); if (n > 0) { cashPos = (cashPos + n - 1) % n; rf.run(); } }}));
+        row.addView(btn(a, ">", new View.OnClickListener() { public void onClick(View v) {
+            int n = nativeCashCount(); if (n > 0) { cashPos = (cashPos + 1) % n; rf.run(); } }}));
+        row.addView(btn(a, "Add", new View.OnClickListener() { public void onClick(View v) {
+            long e = nativeCashEntry(cashPos); if (e < 0) return;
+            int got = nativeAddItem((int) (e & 0xFFFF), (int) ((e >> 16) & 0xFF));
+            Toast.makeText(a, "entraram " + got, Toast.LENGTH_SHORT).show(); }}));
+        panel.addView(row);
+        panel.addView(btn(a, "Salvar jogo (SAVE_Save)", new View.OnClickListener() { public void onClick(View v) {
+            Toast.makeText(a, nativeSave() ? "salvo" : "falhou", Toast.LENGTH_SHORT).show(); }}));
+        rf.run();
     }
 
     private static void build(final Activity a) {
@@ -69,6 +103,7 @@ public class ModMenu {
 
         panel.addView(btn(a, "+1000000 Gold", new View.OnClickListener() { public void onClick(View v) {
             nativeAddMoney(1000000); refresh.run(); }}));
+        addCashRow(a, panel);
         panel.addView(btn(a, "Salvar dump (diagnostico)", new View.OnClickListener() { public void onClick(View v) {
             try {
                 java.io.File dir = a.getExternalFilesDir(null);
