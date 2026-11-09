@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.18)
+project(modmenu CXX)
+set(CMAKE_CXX_STANDARD 17)
+add_library(modmenu SHARED modmenu.cpp)
+target_link_libraries(modmenu dl log)
+target_link_options(modmenu PRIVATE -Wl,-z,max-page-size=16384)
