@@ -132,14 +132,18 @@ public class ModMenu {
         fp.leftMargin = dp(a, 8); fp.topMargin = dp(a, 20);
         root.addView(fab, fp);
 
+        final int slop = dp(a, 12); // tolerancia: ate 12dp de tremida ainda conta como toque
         fab.setOnTouchListener(new View.OnTouchListener() {
-            float dx, dy; boolean moved;
+            float dx, dy, downX, downY; boolean moved;
             public boolean onTouch(View v, MotionEvent e) {
                 FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) v.getLayoutParams();
-                switch (e.getAction()) {
+                switch (e.getActionMasked()) {
                     case MotionEvent.ACTION_DOWN:
-                        dx = e.getRawX() - lp.leftMargin; dy = e.getRawY() - lp.topMargin; moved = false; return true;
+                        downX = e.getRawX(); downY = e.getRawY();
+                        dx = downX - lp.leftMargin; dy = downY - lp.topMargin; moved = false; return true;
                     case MotionEvent.ACTION_MOVE:
+                        if (!moved && Math.abs(e.getRawX() - downX) < slop && Math.abs(e.getRawY() - downY) < slop) return true;
+                        if (!moved) { dx = e.getRawX() - lp.leftMargin; dy = e.getRawY() - lp.topMargin; }
                         lp.leftMargin = (int) (e.getRawX() - dx); lp.topMargin = (int) (e.getRawY() - dy);
                         moved = true; v.setLayoutParams(lp);
                         FrameLayout.LayoutParams q = (FrameLayout.LayoutParams) sv.getLayoutParams();
@@ -154,6 +158,8 @@ public class ModMenu {
                                 Toast.makeText(a, "Erro no menu: " + t, Toast.LENGTH_LONG).show();
                             }
                         }
+                        return true;
+                    case MotionEvent.ACTION_CANCEL:
                         return true;
                 }
                 return false;
