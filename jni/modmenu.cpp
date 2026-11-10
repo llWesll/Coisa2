@@ -30,7 +30,7 @@ static bool stackable(int idx) {
     return r && (r[6] & 1);
 }
 
-// classe com bit 3 = vai para a bolsa 5 (cash E quest/especiais)
+// classe com bit 3 = vai para a bolsa 5 (a bolsa de quest, sprite com "Q")
 static bool isBag5(int idx) {
     const uint8_t* r = itemRec(idx);
     auto pd = sym<uint8_t**>("ITEMCLASSBASE_pData");
@@ -124,7 +124,7 @@ JNIEXPORT jobjectArray JNICALL Java_com_mod_ModMenu_nativeItemNames(JNIEnv* env,
     return arr;
 }
 
-// flags por item: bit0 = empilhavel, bit1 = item do catalogo da loja cash, bit2 = vai para a bolsa 5 (cash/quest/especiais)
+// flags por item: bit0 = empilhavel, bit1 = item do catalogo da loja cash, bit2 = vai para a bolsa 5 (quest)
 JNIEXPORT jbyteArray JNICALL Java_com_mod_ModMenu_nativeItemFlags(JNIEnv* env, jclass) {
     auto cnt = sym<uint16_t*>("ITEMDATABASE_nRecordCount");
     if (!cnt) return nullptr;
