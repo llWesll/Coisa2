@@ -30,14 +30,27 @@ static bool stackable(int idx) {
     return r && (r[6] & 1);
 }
 
-// classe com bit 3 = item cash (vai para a bolsa 5)
-static bool isCash(int idx) {
+// classe com bit 3 = vai para a bolsa 5 (cash E quest/especiais)
+static bool isBag5(int idx) {
     const uint8_t* r = itemRec(idx);
     auto pd = sym<uint8_t**>("ITEMCLASSBASE_pData");
     auto sz = sym<uint8_t*>("ITEMCLASSBASE_nRecordSize");
     auto n = sym<uint16_t*>("ITEMCLASSBASE_nRecordCount");
     if (!r || !pd || !*pd || !sz || !n || r[2] >= *n) return false;
     return ((*pd)[(size_t)(*sz) * r[2] + 2] & 8) != 0;
+}
+
+// item vendido na loja cash = aparece no catalogo CASHITEMBASE (u16 indice nos 2 primeiros bytes de cada registro)
+static bool inCashCatalog(int idx) {
+    auto pd = sym<uint8_t**>("CASHITEMBASE_pData");
+    auto sz = sym<uint8_t*>("CASHITEMBASE_nRecordSize");
+    auto n = sym<uint16_t*>("CASHITEMBASE_nRecordCount");
+    if (!pd || !*pd || !sz || !n || *sz < 2) return false;
+    for (int i = 0; i < (int)*n; i++) {
+        const uint8_t* r = *pd + (size_t)(*sz) * (size_t)i;
+        if ((int)(r[0] | (r[1] << 8)) == idx) return true;
+    }
+    return false;
 }
 
 static bool addOne(int idx, int cnt) {
@@ -111,14 +124,14 @@ JNIEXPORT jobjectArray JNICALL Java_com_mod_ModMenu_nativeItemNames(JNIEnv* env,
     return arr;
 }
 
-// flags por item: bit0 = empilhavel, bit1 = cash
+// flags por item: bit0 = empilhavel, bit1 = item do catalogo da loja cash, bit2 = vai para a bolsa 5 (cash/quest/especiais)
 JNIEXPORT jbyteArray JNICALL Java_com_mod_ModMenu_nativeItemFlags(JNIEnv* env, jclass) {
     auto cnt = sym<uint16_t*>("ITEMDATABASE_nRecordCount");
     if (!cnt) return nullptr;
     int n = *cnt;
     jbyteArray arr = env->NewByteArray(n);
     jbyte* buf = new jbyte[n];
-    for (int i = 0; i < n; i++) buf[i] = (jbyte)((stackable(i) ? 1 : 0) | (isCash(i) ? 2 : 0));
+    for (int i = 0; i < n; i++) buf[i] = (jbyte)((stackable(i) ? 1 : 0) | (inCashCatalog(i) ? 2 : 0) | (isBag5(i) ? 4 : 0));
     env->SetByteArrayRegion(arr, 0, n, buf);
     delete[] buf;
     return arr;
