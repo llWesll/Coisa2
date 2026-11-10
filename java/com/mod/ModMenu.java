@@ -55,6 +55,8 @@ public class ModMenu {
     private static TextView selLabel;
     private static TextView goldInfo;
     private static String filterText = "";
+    private static ListView listView;
+    private static boolean listBound = false;
 
     public static void start(final Activity a) {
         if (started) return;
@@ -138,7 +140,18 @@ public class ModMenu {
             return;
         }
         itemsLoaded = true;
-        applyFilter("");
+        applyFilter(filterText);
+    }
+
+    // chamado DEPOIS do painel ser desenhado: carrega os nomes e religa o adapter na primeira vez
+    private static void showItems(Activity a) {
+        loadItems(a);
+        if (itemsLoaded && listView != null) {
+            applyFilter(filterText);
+            if (!listBound) { listView.setAdapter(adapter); listBound = true; }
+            listView.invalidateViews();
+        }
+        refreshGold();
     }
 
     private static void applyFilter(String q) {
@@ -268,6 +281,7 @@ public class ModMenu {
             }
         };
         list.setAdapter(adapter);
+        listView = list;
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
                 selected = shown.get(pos);
@@ -318,8 +332,14 @@ public class ModMenu {
                             try {
                                 boolean open = panel.getVisibility() == View.GONE;
                                 panel.setVisibility(open ? View.VISIBLE : View.GONE);
-                                if (open) { loadItems(a); refreshGold(); }
-                                else hideKeyboard(a, v);
+                                if (open) {
+                                    refreshGold();
+                                    panel.post(new Runnable() { public void run() {
+                                        try { showItems(a); } catch (Throwable t2) {
+                                            Toast.makeText(a, "Erro na lista: " + t2, Toast.LENGTH_LONG).show();
+                                        }
+                                    }});
+                                } else hideKeyboard(a, v);
                             } catch (Throwable t) {
                                 Toast.makeText(a, "Erro no menu: " + t, Toast.LENGTH_LONG).show();
                             }
