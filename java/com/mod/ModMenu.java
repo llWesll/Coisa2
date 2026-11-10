@@ -269,8 +269,9 @@ public class ModMenu {
             public View getView(int p, View cv, ViewGroup parent) {
                 TextView t = (cv instanceof TextView) ? (TextView) cv : new TextView(a);
                 int idx = shown.get(p);
-                boolean cash = flags != null && idx < flags.length && (flags[idx] & 2) != 0;
-                t.setText(names[idx] + (cash ? "  [cash]" : ""));
+                int fl = (flags != null && idx < flags.length) ? flags[idx] : 0;
+                String tag = (fl & 2) != 0 ? "  [cash]" : ((fl & 4) != 0 ? "  [quest]" : "");
+                t.setText(names[idx] + tag);
                 t.setTextSize(13);
                 t.setTextColor(Color.WHITE);
                 t.setSingleLine(true);
