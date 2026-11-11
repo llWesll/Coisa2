@@ -10,8 +10,6 @@
 4. Desinstale o original antes (a assinatura muda).
 
 ## Tradução
-- `translation/texts_en.json`: todos os textos em inglês (10.603 entradas, `"índice": "texto"`).
-- `translation/texts_pt.json`: a tradução, mesmo formato e mesmos índices. **Só precisa conter o que já foi traduzido**; o resto continua em inglês.
-- Mantenha os códigos de controle do jogo iguais ao original (`$B $R $S $G &N &P %d %s ...`). `%d` e `%s` diferentes
-  do original fazem o build falhar de propósito (travariam o jogo); os demais geram só um aviso.
-- `tools/mt_tool.py unpack|pack`: extrai/recria os arquivos `memorytext_*.dat.jpg` (uso local, opcional).
+- `translation/texts_en.json`: todos os textos em inglês
+- `translation/texts_pt.json`: a tradução, mesmo formato e mesmos índices, o resto continua em inglês.
+- `tools/mt_tool.py unpack|pack`: extrai/recria os arquivos `memorytext_*.dat.jpg`.
