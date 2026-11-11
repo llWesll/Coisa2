@@ -1,0 +1,698 @@
+0	Cavaleiro Negro
+1	O poder original dos nobres cavaleiros excedia o que humanos podem suportar. Com solene devoção e lealdade à Tribo das Sombras, os cavaleiros negros eram os principais virtuoses da Tribo.
+2	Assassino
+3	Fazem parte do continente de Inotia há muito tempo. Com rigorosos treinamentos e habilidades reais de combate, detêm o maior poder de combate independente do continente.
+4	Bruxo
+5	Estes magos foram atraídos pelo fascinante poder sombrio da Tribo das Sombras, e não pela fé religiosa na igreja. Suas práticas de magia e feitiçaria são as mais destrutivas do continente de Inotia.
+6	Sacerdote
+7	Alguns dos sombrios Seguidores das Sombras já foram sacerdotes devotos de Tamit, a Doadora da Vida. Sua fé distorcida na magia sombria é mais destrutiva do que quando eles eram imbuídos dos poderes da luz.
+8	Patrulheiro
+9	Nas florestas, longe da maioria das atividades humanas, vivem estes perseguidores. Membros da Tribo das Sombras os contatam para obter informações valiosas que garantam sua sobrevivência.
+10	Guerreiro
+11	Das terras altas ao norte do continente de Inotia vêm estes campeões selvagens. Alguns são mercenários da Tribo das Sombras, não por honra ou riqueza, mas por seu forte desejo de massacrar inimigos em batalha.
+12	FOR
+13	FOR
+14	Aumenta o dano físico. Armas de duas mãos recebem bônus.
+15	DES
+16	DES
+17	Aumenta os ataques físicos e a precisão, além de outros bônus de esquiva.
+18	VIT
+19	VIT
+20	Aumenta o HP e a defesa.
+21	INT
+22	INT
+23	Aumenta o dano de magias. Orbes (ferramentas mágicas) recebem bônus.
+24	MEN
+25	MEN
+26	Aumenta o dano de magias e os bônus de precisão.
+30	Dinheiro
+31	Bolsa de Mão
+32	Bolsa Pequena
+33	Mochila
+34	Bolsa Infinita
+35	Poção de Cura (P)
+36	Poção de Cura (M)
+37	Poção de Cura (G)
+38	Poção de Cura (GG)
+39	Gema de Mana
+40	Poção de Vida (P)
+41	Poção de Vida (M)
+42	Poção de Vida (G)
+43	Poção de Vida (GG)
+44	Elixir
+45	Elixir Supremo
+46	Pergaminho de Arma Novato
+47	Pergaminho de Arma Padrão
+48	Pergaminho de Arma Avançado
+49	Pergaminho de Arma Supremo
+50	Pergaminho de Arma do Caos
+51	Pergaminho de Armadura Novato
+52	Pergaminho de Armadura Padrão
+53	Pergaminho de Armadura Avançado
+54	Pergaminho de Armadura Supremo
+55	Pergaminho de Armadura do Caos
+56	Pergaminho de Ressurreição
+57	Pergaminho de Ressurreição Aprimorado
+58	Joia Novata
+59	Joia Padrão
+60	Joia Avançada
+61	Joia Suprema
+62	Joia do Caos
+63	Mithril
+64	Escama do Caos
+65	Couro
+66	Pele Ensanguentada
+67	Pó da Morte
+68	Cristal de Feitiço
+69	Cristal Palpitante
+70	Garra Afiada
+71	Tecido Mágico
+72	Emblema de Mercenário (Cavaleiro Negro)
+73	Emblema de Mercenário (Assassino)
+74	Emblema de Mercenário (Patrulheiro)
+75	Emblema de Mercenário (Bruxo)
+76	Emblema de Mercenário (Sacerdote)
+77	Emblema de Mercenário (Guerreiro)
+78	Emblema de Mercenário Divino
+79	Emblema de Herói
+80	Emblema de Mercenário das Sombras
+81	Livro de Habilidades
+82	Dado Novato
+83	Dado Padrão
+84	Dado Avançado
+85	Dado Supremo
+86	Dado do Caos
+87	Folha da Vida
+88	Fruto da Causa
+89	Raiz da Alma
+90	Galho Mágico
+91	Flor Transcendente
+92	Lamparina
+93	Prece da Ressurreição
+94	Equipamento
+95	Adaga
+96	Espada Curta
+97	Punhal
+98	Kukri
+99	Lâmina Ninja
+100	Lâmina
+101	Main Gauche
+102	Kris
+103	Faca
+104	Adaga de Assassino
+105	Lâmina da Impassibilidade
+106	Lâmina do Inferno
+107	Sashimi
+108	Cortador Relâmpago
+109	Guia do Inferno
+110	Garra do Predador
+111	Presa Destrutiva
+112	Espada do Draco
+113	Bebedor de Sangue
+114	Espada Longa
+115	Espada Larga
+116	Cimitarra
+117	Katana
+118	Espada de Guerra
+119	Espada Rúnica
+120	Gládio
+121	Falchion
+122	Talwar
+123	Espada de Cavaleiro
+124	Durandal
+125	Mestre de Duelos
+126	Excalibur
+127	Sabre do Dragão
+128	Lâmina do Oriente
+129	Masamune
+130	Espada Celestial
+131	Corvo Sangrento
+132	Espada do Imperador
+133	Machadinha
+134	Machado Duplo
+135	Francisca
+136	Tomahawk
+137	Machado de Guerra
+138	Naga
+139	Navalha do Inferno
+140	Quebra-Crânios
+141	Destruidor de Almas
+142	Matador Insano
+143	Machado de Batalha de Wolfram
+144	Estilhaçador das Trevas
+145	Fatiador de Corpos
+146	Clava
+147	Martelo de Guerra
+148	Taco
+149	Martelo de Guerra Anão
+150	Cacete de Poder
+151	Maça de Ferro do Tirano
+152	Martelo da Tempestade
+153	Maça Flagelo
+154	Maça do Herege
+155	Maça de Ferro do Demônio das Sombras
+156	Montante
+157	Bulova
+158	Lâmina de Crescente Dupla
+159	Espada Crescente
+160	Espada Grande
+161	Espada Bastarda
+162	Machado Viking
+163	Naginata
+164	Machado Gigante
+165	Flamberge
+166	Angurvadel
+167	Eclipse Lunar
+168	Espada de Prata
+169	Dragão Sangrento
+170	Lança de Longinus
+171	Ashcalon
+172	Mata-Dragões
+173	Rio de Almas
+174	Matador Mortal
+175	Cetro da Destruição
+176	Laser de Obsidiana
+177	Orbe de Cristal
+178	Livro Mágico
+179	Ídolo
+180	Orbe de Mana
+181	Livro Antigo
+182	Cristal Brilhante
+183	Livro do Oráculo
+184	Boneca das Sombras
+185	Orbe Azul
+186	Livro Ancestral
+187	Coração de Dragão
+188	Cristal Escaldante
+189	Tábua Rúnica
+190	Livro do Julgamento
+191	Totem Espiritual
+192	Salão da Salvação
+193	Bola de Fogo Destrutiva
+194	Tábua Sagrada
+195	Totem Destrutivo
+196	Cajado
+197	Cajado de Cedro
+198	Cajado de Osso
+199	Cajado de Nogueira
+200	Cajado de Mago
+201	Bordão
+202	Cajado do Sábio
+203	Cajado Ancestral
+204	Cajado do Monge
+205	Cajado Rúnico
+206	Cajado Majestoso
+207	Apóstolos Onipotentes
+208	Cajado Divino
+209	Cajado dos Pesadelos
+210	Galho de Yggdrasil
+211	Ruína da Cria
+212	Cajado de Anúbis
+213	Desolador
+214	Brado da Mente
+215	Arco do Caçador
+216	Arco Curto
+217	Arco Longo
+218	Arco Composto
+219	Arco de Batalha
+220	Arco de Bambu
+221	Arco Simples
+222	Arco Grande
+223	Arco Gakkung
+224	Arco da Águia
+225	Arco do Arqueiro Mestre
+226	Gungnir: Arco de Odin
+227	Olho de Falcão
+228	Arco Élfico
+229	Vento da Morte
+230	Vingador
+231	Arco do Conquistador dos Ventos
+232	Ferrão de Osso
+233	Atirador de Elite
+234	Besta Leve
+235	Besta Pesada
+236	Catapulta de Estilingue
+237	Besta Reforçada
+238	Catapulta
+239	Chokonu
+240	Besta de Batalha
+241	Arremessador
+242	Arbalesta
+243	Balista
+244	Besta do Matador
+245	Extorsor de Corações
+246	Fogo do Inferno
+247	Atirador Automático
+248	Fogo de Inotia
+249	Vingança
+250	Franco-Atirador
+251	Besta Redrider
+252	Quebra-Corações
+253	Manto
+254	Manto de Algodão
+255	Uniforme
+256	Túnica
+257	Traje Encantado
+258	Manto de Mago
+259	Manto Elemental
+260	Manto Branco Puro
+261	Túnica Élfica
+262	Traje do Crepúsculo
+263	Mártir da Luz
+264	Manto do Herói Esquecido
+265	Manto de Arcana
+266	Veste do Abismo
+267	Traje Fúnebre dos Corrompidos
+268	Capa do Dragão
+269	Capa do Rei Rich
+270	Manto Esfarrapado do Sábio
+271	Armadura de Couro
+272	Armadura de Pele
+273	Couro Rígido
+274	Couro Sombrio
+275	Armadura de Andarilho
+276	Malha de Bandido
+277	Armadura Fantasma
+278	Couro Cravejado
+279	Armadura do Pavor
+280	Couro Élfico
+281	Traje de Couro do Grande Ladrão
+282	Perseguidor Sombrio
+283	Malha da Morte
+284	Uniforme Negro
+285	Couro de Lobisomem
+286	Armadura de Couro Rank S
+287	Andarilho das Sombras
+288	Perseguidor Negro
+289	Cota de Malha
+290	Armadura de Talas
+291	Placas Leves
+292	Meia Armadura
+293	Armadura Completa
+294	Cota de Anéis
+295	Brigantina
+296	Malha Élfica
+297	Armadura de Ferro
+298	Armadura do Caos
+299	Malha de Balrog
+300	Armadura de Escamas de Dragão
+301	Conquistador de Sangue
+302	Armadura Ancestral
+303	Armadura Pesada
+304	Malha de Bisão
+305	Armadura da Tristeza
+306	Coração de Aço
+307	Chapéu de Pano
+308	Capuz
+309	Chapéu Cônico
+310	Face de Caveira
+311	Diadema
+312	Chapéu da Tribo
+313	Bandana Negra
+314	Chapéu de Feiticeiro
+315	Elmo de Osso
+316	Coroa
+317	Viseira Rank S
+318	Coroa do Rei Rich
+319	Coroa da Glória
+320	Iluminado
+321	Máscara de Gato
+322	Orelhas de Gato
+323	Faixa de Remex
+324	Chapéu de Bruxa
+325	Chapéu Cônico Encantado
+326	Chapéu de Aventureiro
+327	Chapéu Cônico de Algodão
+328	Coroa da Prosperidade
+329	Diadema das Chamas
+330	Chapéu de Carpa
+331	Chapéu de Palhaço
+332	Gorro de Papai Noel
+333	Semente
+334	Fedora
+335	Chapéu de Mago Brilhante
+336	Faixa de Bebê
+337	Turbante do Assassino
+338	Bandana das Trevas
+339	Chapéu de Fada
+340	Faixa Ninja
+341	Coroa do Conhecimento
+342	Bandana da Sabedoria
+343	Orelhas de Coelho
+344	Descolado
+345	Chapéu da Sorte
+346	Chapéu do Sábio
+347	Diadema da Esperança
+348	Laço Grande
+349	Elmo de Pelo
+350	Elmo de Couro
+351	Capacete de Caveira
+352	Elmo
+353	Elmo Completo
+354	Boné do Caçador
+355	Boné das Sombras
+356	Elmo de Soldado
+357	Capacete de Lutador
+358	Elmo de Cavaleiro
+359	Véu de Aço
+360	Elmo de Paládio
+361	Elmo da Névoa
+362	Coroa do Demônio
+363	Chama da Glória
+364	Elmo Berserker
+365	Orelhas Delicadas
+366	Coroa do Império
+367	Chapéu de Estrela
+368	Orelhas Atrevidas
+369	Fada das Flores
+370	Tiara
+371	Capacete de Samurai
+372	Máscara da Divindade Carpa
+373	Vaso Flamejante
+374	Máscara Miau
+375	Panela de Alpaca
+376	Elmo do Herói
+377	Elmo do Cavaleiro Dragão
+378	Elmo Angelical
+379	Elmo de Gladiador
+380	Estilo Volumoso
+381	Elmo do Cavaleiro Negro
+382	Chapéu Vermelho
+383	Laço Colorido
+384	Luvas de Couro
+385	Luvas de Pelo
+386	Braçadeira de Couro
+387	Manopla de Couro
+388	Punho de Batalha
+389	Luvas Resistentes
+390	Mitenes
+391	Braçadeira Mágica
+392	Manopla Rúnica
+393	Punho de Guerra
+394	Luvas de Aventureiro
+395	Garras de Aço
+396	Braçadeiras Demoníacas
+397	Braçadeiras de Lutador
+398	Empunhadura Rank S
+399	Punho de Sangue
+400	Manopla da Legião
+401	Manopla da Vitória
+402	Sapatos
+403	Botas
+404	Botas Pesadas
+405	Botas Rúnicas
+406	Grevas
+407	Sapatos Rúnicos
+408	Botas Reforçadas
+409	Botas de Batalha
+410	Botas Mágicas
+411	Botas de Guerra
+412	Sandálias Leves
+413	Botas da Alma
+414	Grevas Encantadas
+415	Botas Aladas
+416	Botas Furtivas Rank S
+417	Pés de Aventureiro
+418	Botas de Infantaria
+419	Botas do Conquistador
+420	Escudo de Madeira
+421	Escudo Pequeno
+422	Escudo Grande
+423	Escudo Pipa
+424	Escudo-Torre
+425	Escudo Redondo
+426	Broquel
+427	Defensor
+428	Escudo do Guardião
+429	Pavês
+430	Escudo Espelhado
+431	Escudo Muralha de Ferro
+432	Escudo de Regulus
+433	Escudo de Liga Metálica
+434	Escudo do Imperador
+435	Escudo de Titã
+436	O Último Guardião
+437	Guardião da Paciência
+438	Ponteira
+439	Anel de Cobre
+440	Anel de Cristal
+441	Anel Brilhante
+442	Anel Encantado
+443	Anel de Prata
+444	Anel de Ouro
+445	Anel de Diamante
+446	Anel da Fé
+447	Anel Luminoso
+448	Argola de Jade
+449	Anel de Jade
+450	Argola da Fé
+451	Anel Dourado
+452	Anel da Súcubo
+453	Anel do Celebrante
+454	Autoridade do Poder
+455	Anel da Alma
+456	Medalha
+457	Pingente de Esmeralda
+458	Amuleto
+459	Dente de Lobo
+460	Talismã de Energia
+461	Colar de Prata
+462	Colar da Eternidade
+463	Colar de Ouro
+464	Dente de Dragão
+465	Sinal da Verdade
+466	Talismã de Sangue Mágico
+467	Talismã de Aventureiro
+468	Colar de Osso Bárbaro
+469	Amuleto da Verdade
+470	Coração de Salamandra
+471	Presas de Megalodonte
+472	Colar de Dentes de Dragão
+473	Verdade da Vida
+474	Capa
+475	Capa Isolante
+476	Capa de Viajante
+477	Capa da Tribo
+478	Capa Premium
+479	Capa Fofa
+480	Capa de Pele
+481	Capa do Perseguidor
+482	Capa das Trevas
+483	Capa da Visão
+484	Capa do Herói
+485	Capa do Guerreiro
+486	Capa da Guerra
+487	Asas de Draco
+488	Brasão do Mestre
+489	Trapos dos Mortos
+490	Asas de Luz
+491	Feridas de Guerra
+492	Adaga Básica
+493	Espada Longa Básica
+494	Machado Básico
+495	Arma Contundente Básica
+496	Montante Básico
+497	Machado de Duas Mãos Básico
+498	Arma Contundente de Duas Mãos Básica
+499	Orbe Básico
+500	Cajado Básico
+501	Arco Básico
+502	Besta Básica
+503	Armadura de Tecido Básica
+504	Armadura de Couro Básica
+505	Armadura de Placas Básica
+506	Chapéu Básico
+507	Elmo Básico
+508	Luvas Básicas
+509	Sapatos Básicos
+510	Escudo Básico
+511	Capa Básica
+512	Talismã Básico
+513	Anel Básico
+514	Diadema Básica
+515	Mármore do Réquiem
+516	Manto da Súcubo
+517	Botas de Couro Negro
+518	Colar de Cristal Vermelho
+519	Anel do Terceiro Olho
+520	Dente de Dragão
+521	Capa do Dragão Sangrento
+522	Couro do Ilusionista
+523	Anel de Gelo e Geada
+524	Dente de Dragão
+525	Capa do Dragão Sangrento
+526	Couro do Ilusionista
+527	Anel de Gelo e Geada
+528	Osso do Dedo do Demônio
+529	Osso do Dedo do Demônio
+530	Pegada do Gigante
+531	Pegada do Gigante
+532	Zweihänder
+533	Placa de Aço Negro
+534	Botas de Guerreiro
+535	Símbolo do Guerreiro Orc de Aço
+536	Anel da Bravura
+537	Fragmento de Pedra Mágica
+538	Recomendação de Janus
+539	Osso da Perna do Esqueleto Guerreiro
+540	Crânio do Esqueleto Guerreiro Rígido
+541	Item Regenerador de Missão
+542	Fragmento de Armadura Velha
+543	Escamas de Asa de Morcego das Cavernas
+544	Cristal de Feitiço Reluzente
+545	Uniforme de Cavaleiro de Berkel 1
+546	Uniforme de Cavaleiro de Berkel 2
+547	Uniforme de Cavaleiro de Berkel 3
+548	Carne de Larva Calcária
+549	Perna Crocante de Aranha das Cavernas
+550	Chave da Prisão
+551	Chave da Prisão
+552	Chave da Prisão
+553	Carne de Larva Gorda
+554	Chave da Mina Oeste
+555	Pedaços de Zinco
+556	Pedaços de Cobre
+557	Pedra da Pureza
+558	Colar da Pedra da Pureza
+559	Rocha Mágica
+560	Óleo de Cacto Venenoso
+561	Chave do Covil dos Goblins
+562	Ossos Macios de Morcego Vampiro
+563	Óleo Condensado de Cacto Venenoso
+564	Pedido de Minério de Rodger
+565	Pedaço de Colmeia de Vespa do Deserto
+566	Cauda de Escorpião Cinzento
+567	Platina Maciça
+568	Asa de Morcego de Asas Vermelhas
+569	Minério de Michikoff
+570	Carne de Morcego
+571	Chapéu de Haiden, o Primeiro
+572	Colar de Schreiber
+573	Antídoto Especial de Robbie
+574	Mercadorias de Ben
+575	Bandana do Chefe dos Capuzes Vermelhos
+576	Montante de Schmitt
+577	Núcleo do Mímico Agressivo
+578	Ovos de Tartaruga do Pântano
+579	Ferramentas Agrícolas de Jose
+580	Anel de Haldate
+581	Carne de Rato das Cavernas
+582	Cacto Contaminado
+583	Ovos de Larva Gigante Negra
+584	Chave da Masmorra Fechada
+585	Armadura de Darius
+586	Língua de Serpente Vermelha
+587	Coração de Lobo Negro
+588	Ervas Vermelhas
+589	Orictalco
+590	Lama Fedorenta
+591	Crânio de Urso de Garras Vermelhas
+592	Chave da Masmorra dos Gritos
+593	Feitiço do Ancião Orc de Aço
+594	Chave da Capela
+595	Espada de Bauer
+596	Plaqueta de Identificação de Kirk
+597	Armadura de Placas de Berkel
+598	Armadura de Couro de Berkel
+599	Manto de Cavaleiro de Berkel
+600	Língua de Serpente Vermelha
+601	Coração de Lobo Negro
+602	Cajado Negro
+603	Arco Negro
+604	Adaga Negra
+605	Espada Negra
+606	Espada Negra Pesada
+607	Anel de Ferro Tosco
+608	Manto Curto
+609	Colar de Cobre
+610	Anel Velho de Latão
+611	Cajado de Latão
+612	Arco de Combate de Berkel
+613	Adaga Afiada
+614	Espada de Berkel
+615	Maça de Ferro de Berkel
+616	Boné de Asa de Morcego
+617	Elmo Especial de Ferro
+618	Luvas de Mineiro
+619	Botas de Andarilho
+620	Anel de Zircão
+621	Armadura Anã Especial
+622	Couro Anão
+623	Manto Anão
+624	Armadura da Bravura
+625	Couro da Ambição
+626	Manto da Sabedoria
+627	Solas de Couro de Lobo
+628	Manopla de Golem
+629	Capuz do Peregrino
+630	Elmo da Condenação
+631	Cajado de Jujuba
+632	Arco Perfura-Sombras
+633	Adaga das Trevas
+634	Devorador de Homens
+635	Presas Ferozes Estilhaçadas
+636	Anel de Jade Verde
+637	Colar de Presa de Lobo
+638	Capa do Guerreiro Orc
+639	Manoplas Abençoadas
+640	Escudo Pipa do Mestre Perdido
+641	Botas Anãs Especiais
+642	Armadura Banhada a Latão
+643	Roupa de Couro do Caçador
+644	Escudo de Bétula
+645	Manto do Xamã
+646	Língua de Serpente Vermelha
+647	Coração de Lobo Negro
+648	Óleo de Slime
+649	Galhos de Arbusto
+650	Núcleos de Livro Mágico Furioso
+651	Carta de Maria
+652	Margaridas
+653	Buquê de Margaridas
+654	Documento Confidencial
+655	Pedra da Alma Fantasma
+656	Lâmina Dançante Sangrenta
+657	Maça Sombria
+658	Cajado das Trevas
+659	Espada do Matador
+660	Besta de Ônix
+661	Colar de Cristal Negro
+662	Anel de Margarida
+663	Fragmento de Carne
+664	Fragmento de Alma
+665	Fragmento de Vida
+666	Ectoplasma
+667	Colar de Eara
+668	Framboesas
+669	Suprimentos
+670	Água Pura
+671	Presas de Aranha Azul do Arbusto
+672	Raízes de Cipó
+673	Cristal Solar
+674	Chave do Depósito
+675	Receita Médica
+676	Raízes de Planta do Pântano
+677	Veneno de Cobra do Pântano
+678	Geleia de Slime Úmida
+679	Bolsa de Amuletos da Rainha Oogle
+680	Olho do Guarda Oogle
+681	Pertences do Caçador
+682	Mercadorias do Vendedor
+683	Folha de Flor Carnívora
+684	Baú do Tesouro
+685	Lista de Suprimentos
+686	Ferrão de Aranha da Floresta
+687	Suprimentos
+688	Galho da Árvore Espiritual
+689	Sementes
+690	Cristal Eterno
+691	Fragmento da Chave do Drow
+692	Chave do Drow
+693	Cristal de Slime Alado Invisível
+694	Presas de Cobra Nevada
+695	Mel da Vespa do Nevasca
+696	Cristal Elemental de Gelo
+697	Trigo
+698	Farinha Refinada
+699	Bolinho de Peixe Especial
+700	Águas Purificadas

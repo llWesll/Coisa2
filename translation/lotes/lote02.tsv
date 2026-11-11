@@ -1,0 +1,442 @@
+701	Adaga Mágica do Drow
+702	Pergaminho Mágico do Elfo
+703	Mapa do Campo Nevado
+704	Pó
+705	Rojão
+706	Óleo de Cacto Floco de Neve
+707	Casco de Tartaruga Casco de Gelo
+708	Ovos de Aranha Veneno-Gelo
+709	Engrenagem
+710	Núcleo Encantado
+711	Mel Doce
+712	Espada Enferrujada
+713	Espada do Guerreiro Drow
+714	Agulha de Mosquito da Floresta
+715	Pedaço de Colmeia de Abelha
+716	Cristal de Fogo
+717	Pele de Lobo
+718	Casaco de Pele
+719	Adaga Real
+720	Fragmento da Existência
+721	Taça do Poder
+722	Carne de Urso
+723	Lâmina de Espada Velha
+724	Madeira Grossa
+725	Pingente de Mulher
+726	Pedra Selada 1
+727	Chave da Masmorra Selada 1
+728	Pedra Selada 2
+729	Chave da Masmorra Selada 2
+730	Mensagem Rasgada
+731	Mensagem Rasgada 2
+732	Pedra Selada 3
+733	Chave da Masmorra Selada 3
+734	Diário de Dominique
+735	Pedra Selada 4
+736	Unidade de Combinação de Arma nv D
+737	Unidade de Combinação de Armadura D
+738	Unidade de Combinação de Arma C
+739	Unidade de Combinação de Armadura C
+740	Unidade de Combinação de Arma B
+741	Unidade de Combinação de Armadura B Nº 1
+742	Unidade de Combinação de Armadura B Nº 2
+743	Unidade de Combinação de Arma A
+744	Unidade de Combinação de Arma S
+745	Unidade de Combinação de Armadura S Nº 1
+746	Unidade de Combinação de Armadura S Nº 2
+747	Unidade de Combinação de Armadura S Nº 3
+748	Botas de Couro do Artesão
+749	Colar de Abóbora Deslumbrante
+750	Placa de Chapa do Ghoul Élfico
+751	Placa de Couro do Ghoul Élfico
+752	Manto do Ghoul Élfico
+753	Anel do Novo Culto
+754	Lágrimas de Dragão
+755	Adaga Golpe-Sombrio
+756	Espada Golpe-Terrestre
+757	Arco Golpe-Ventoso
+758	Luvas de Gelo Eterno
+759	Colar do Herói Goblin
+760	Sapatos do Pé de Guardião
+761	Mjolnir
+762	Unhas de Colosso
+763	Cajado do Profeta
+764	Arco Lateral de Cervo
+765	Bandana do Sábio
+766	Elmo do Sábio
+767	Botas de Ônix
+768	Manto da Aurora
+769	Conquistador das Trevas
+770	Armadura Sombria
+771	Capa da Ressurreição
+772	Anel de Gelo
+773	Adaga Relâmpago
+774	Espada do Bravo Guerreiro
+775	Espada de Sete Ramos
+776	Cristal de Calor
+777	Besta do Vento Gélido
+778	Manopla da Destruição
+779	Cristal de Lágrima
+780	Adaga do Drow
+781	Espada do Guerreiro Drow
+782	Martelo Sombrio
+783	Cajado do Mago Drow
+784	Arco Perseguidor Sombrio
+785	Botas Deslumbrantes
+786	Capa Velha do Caçador
+787	Adaga Ancestral
+788	Espada Longa Ancestral
+789	Espada Ancestral
+790	Cajado Ancestral
+791	Besta Ancestral
+792	Manto de Ivan
+793	Armadura de Couro de Ivan
+794	Armadura de Ivan
+795	Colar de Dominique
+796	Suco Fraco de Cacto
+797	Fruta de Palmeira
+798	Dispositivo de Reparo da Máquina de Fusão
+799	Rocha
+800	Gravetos Secos
+801	Vesícula de Urso do Desfiladeiro
+802	Casco de Tartaruga do Prado
+803	Folhas de Grauple
+804	Carne de Morcego Vampiro
+805	Suco de Larva Listrada de Preto
+806	Teia de Aranha
+807	Raízes de Arbusto
+808	Cristal de Feitiço Vermelho
+809	Cristal de Feitiço Cinza
+810	Cristal de Feitiço Verde
+811	Lantejoula
+812	Colar do Gerente da Fusão
+813	Flagelo da Vida Incompleto
+814	Lâmina de Espada Amaldiçoada
+815	A Espada Prometida
+816	Botas da Velocidade
+817	Armadura da Verdade
+818	Poção de Cura de Shin
+819	Fragmentos de Memória
+820	Espada Negra
+821	Espada da Destruição
+822	Espada do Extremo
+823	Espada do Genocídio
+824	Espada do Caos
+825	Espada do Renascimento
+826	Espada da Verdade
+827	Espada Negra Gigante
+828	Espada da Destruição Gigante
+829	Espada do Extremo Gigante
+830	Espada do Genocídio Gigante
+831	Espada do Caos Gigante
+832	Espada do Renascimento Gigante
+833	Espada da Verdade Gigante
+834	Lâmina Negra
+835	Lâmina da Destruição
+836	Lâmina do Extremo
+837	Lâmina do Genocídio
+838	Lâmina do Caos
+839	Lâmina do Renascimento
+840	Lâmina da Verdade
+841	Cajado Negro
+842	Cajado da Destruição
+843	Cajado do Extremo
+844	Cajado do Genocídio
+845	Cajado do Caos
+846	Cajado do Renascimento
+847	Cajado da Verdade
+848	Maça Negra
+849	Maça da Destruição
+850	Maça do Extremo
+851	Maça do Genocídio
+852	Maça do Caos
+853	Maça do Renascimento
+854	Maça da Verdade
+855	Arco Negro
+856	Arco da Destruição
+857	Arco do Extremo
+858	Arco do Genocídio
+859	Arco do Caos
+860	Arco do Renascimento
+861	Arco da Verdade
+862	Escudo Negro
+863	Escudo da Destruição
+864	Escudo do Extremo
+865	Escudo do Genocídio
+866	Escudo do Caos
+867	Escudo do Renascimento
+868	Escudo da Verdade
+869	Placa Negra
+870	Placa da Destruição
+871	Placa do Extremo
+872	Placa do Genocídio
+873	Placa do Caos
+874	Placa da Reencarnação
+875	Placa da Verdade
+876	Placa de Ferro Negro
+877	Armadura Leve da Destruição
+878	Armadura Leve do Extremo
+879	Armadura Leve do Genocídio
+880	Armadura Leve do Caos
+881	Armadura Leve do Renascimento
+882	Armadura Leve da Verdade
+883	Uniforme Negro
+884	Uniforme da Destruição
+885	Uniforme do Extremo
+886	Uniforme do Genocídio
+887	Uniforme do Caos
+888	Uniforme do Renascimento
+889	Uniforme da Verdade
+890	Bandana Negra
+891	Bandana da Destruição
+892	Bandana do Extremo
+893	Bandana do Genocídio
+894	Bandana do Caos
+895	Bandana do Renascimento
+896	Bandana da Verdade
+897	Elmo Negro
+898	Elmo da Destruição
+899	Elmo do Extremo
+900	Elmo do Genocídio
+901	Elmo do Caos
+902	Elmo do Renascimento
+903	Elmo da Verdade
+904	Capa da Devoção
+905	Conjunto de Cavaleiro Iniciante
+906	Conjunto de Cavaleiro Soldado
+907	Conjunto de Cavaleiro de Elite
+908	Conjunto de Cavaleiro Berkeliano
+909	Conjunto de Cavaleiro Veterano
+910	Conjunto de Cavaleiro Campeão
+911	Conjunto de Cavaleiro Herói
+912	Conjunto de Guerreiro Iniciante
+913	Conjunto de Guerreiro Soldado
+914	Conjunto de Guerreiro de Elite
+915	Conjunto de Guerreiro Berkeliano
+916	Conjunto de Guerreiro Veterano
+917	Conjunto de Guerreiro Campeão
+918	Conjunto de Guerreiro Herói
+919	Conjunto de Assassino Iniciante
+920	Conjunto de Assassino Soldado
+921	Conjunto de Assassino de Elite
+922	Conjunto de Assassino Berkeliano
+923	Conjunto de Assassino Veterano
+924	Conjunto de Assassino Campeão
+925	Conjunto de Assassino Herói
+926	Conjunto de Bandido Iniciante
+927	Conjunto de Bandido Soldado
+928	Conjunto de Bandido de Elite
+929	Conjunto de Bandido Berkeliano
+930	Conjunto de Bandido Veterano
+931	Conjunto de Bandido Campeão
+932	Conjunto de Bandido Herói
+933	Conjunto de Feiticeiro Iniciante
+934	Conjunto de Feiticeiro Soldado
+935	Conjunto de Feiticeiro de Elite
+936	Conjunto de Feiticeiro Berkeliano
+937	Conjunto de Feiticeiro Veterano
+938	Conjunto de Feiticeiro Campeão
+939	Conjunto de Feiticeiro Herói
+940	Conjunto de Abade Iniciante
+941	Conjunto de Abade Soldado
+942	Conjunto de Abade de Elite
+943	Conjunto de Abade Berkeliano
+944	Conjunto de Abade Veterano
+945	Conjunto de Abade Campeão
+946	Conjunto de Abade Herói
+947	Conjunto de Caçador Iniciante
+948	Conjunto de Caçador Soldado
+949	Conjunto de Caçador de Elite
+950	Conjunto de Caçador Berkeliano
+951	Conjunto de Caçador Veterano
+952	Conjunto de Caçador Campeão
+953	Conjunto de Caçador Herói
+954	Conjunto de Aventureiro
+955	Feitiço de Redefinir Habilidades
+956	Feitiço de Redefinir Atributos
+957	Runa Absoluta
+958	Emblema do Herói (Cavaleiro Negro)
+959	Emblema do Herói (Assassino)
+960	Emblema do Herói (Bruxo)
+961	Emblema do Herói (Sacerdote)
+962	Emblema do Herói (Patrulheiro)
+963	Emblema do Herói (Guerreiro)
+964	Livro de Habilidades Selado (Cavaleiro Negro)
+965	Livro de Habilidades Selado (Assassino)
+966	Livro de Habilidades Selado (Bruxo)
+967	Livro de Habilidades Selado (Sacerdote)
+968	Livro de Habilidades Selado (Patrulheiro)
+969	Livro de Habilidades Selado (Guerreiro)
+970	Conjunto do Caos
+971	Conjunto do Caos Abundante
+972	Conjunto do Caos Épico
+973	Conjunto do Caos Épico Abundante
+974	Joia da Catarse
+975	Pedaço de Slime
+976	Pergaminho de Aprimoramento Esp. de Arma
+977	Pergaminho de Aprimoramento Esp. de Armadura
+978	Máscara de Disfarce
+979	Colar Real
+980	Bracelete Real
+981	Conjunto de Combinação de Equipamento
+982	Conjunto de Combinação de Equipamento Abundante
+983	Chave
+984	Chave
+985	Chave
+986	Documento Antigo
+987	Agulha de Espinho
+988	Presas de Rato Cinzento
+989	Lágrimas de Tartaruga do Arbusto
+990	Carne de Cobra
+991	Ouro de Roderick
+992	Plaquetas de Identificação dos Soldados de Arnen
+993	Botas Oficiais de Caçador de Recompensas
+994	Capuz Oficial de Caçador de Recompensas
+995	Espada Oficial de Caçador de Recompensas
+996	Armadura Anã Intrépida
+997	Arco Oficial de Caçador de Recompensas
+998	Cajado da Justiça
+999	Maça de Smite
+1000	Medalha da Guilda de Caçadores de Recompensas
+1001	Capa do Guerreiro das Terras Selvagens
+1002	Espada do Caçador Perdido
+1003	Besta do Caçador Élfico
+1004	Punho da Justiça
+1005	Elmo do Caçador Veterano
+1006	Anel do Sábio
+1007	Fragmentos de Memória
+1008	Fragmentos de Memória
+1009	Fragmentos de Memória
+1010	Fragmentos de Memória
+1011	Fragmentos de Memória
+1012	Fragmentos de Memória
+1013	Fragmentos de Memória
+1014	Fragmentos de Memória
+1015	Fragmentos de Memória
+1016	Fragmentos de Memória
+1017	Fragmentos de Memória
+1018	Espada Afiada Abandonada
+1019	Armadura de Placas de Jeff
+1020	Armadura de Couro de Jeff
+1021	Manto de Jeff
+1022	Reiniciar Atributos
+1023	Reiniciar Habilidades
+1024	Ressuscitar Todos (Prece da Ressurreição)
+1025	Combinação do Caos
+1026	Combinação do Caos Épico
+1027	Concluir Missão da Masmorra Bônus
+1028	Abrir Vaga de Mercenário
+1029	Ressurreição Abençoada ao aniquilar o grupo
+1030	Presa de Lobo
+1031	Cristal de Slime
+1032	Coração de Agouara Carmesim
+1033	Arma Abandonada
+1034	Asas de Morcego Maligno
+1035	Crânio Duro
+1036	Seiva Negra
+1037	Baú de Colar Selado
+1038	Baú de Armadura Selado
+1039	Baú de Arma Selado
+1040	Pergaminho de Impulso de Potencial
+1041	Pergaminho de Amplificação de EXP
+1042	Adaga Impiedosa
+1043	Espada Impiedosa
+1044	Espada Gigante Impiedosa
+1045	Maça de Ferro Impiedosa
+1046	Cajado Impiedoso
+1047	Arco Impiedoso
+1048	Adaga
+1049	Espada Longa
+1050	Machado
+1051	Maça
+1052	Duas Mãos
+1053	Orbe
+1054	Cajado
+1055	Arco
+1056	Besta
+1057	Armadura de Tecido
+1058	Armadura de Couro
+1059	Armadura de Placas
+1060	Chapéu
+1061	Elmo
+1062	Luvas
+1063	Sapatos
+1064	Escudo
+1065	Capa
+1066	Talismã
+1067	Anel
+1068	Circuito
+1069	Coroa
+1070	Poção (Recuperação)
+1071	Poção (Aprimorada)
+1072	Livro de Feitiços
+1073	Joia
+1074	Outros
+1075	Materiais
+1076	Receita
+1077	Emblema de Mercenário
+1078	Livro de Habilidades
+1079	Bolsa
+1080	Dados
+1081	Diversos
+1082	Missões
+1083	Compra no app
+1084	Enferrujado
+1085	Enferrujado
+1086	Velho
+1087	Velho
+1090	Ancestral
+1091	Ancestral
+1092	Incisivo
+1093	Astuto
+1094	Polido
+1095	Durável
+1096	Artesanal
+1097	Artesanal
+1098	Aço
+1099	Premium
+1100	Titânio
+1101	Reluzente
+1102	Mithril
+1103	Misterioso
+1114	FOR
+1115	DES
+1116	VIT
+1117	INT
+1118	MEN
+1119	Taxa de Crítico
+1120	Taxa de Acerto
+1121	Resistência a Dano Crítico
+1122	Resistência a Dano Mágico
+1123	Taxa de Esquiva
+1124	Taxa de Bloqueio com Escudo
+1125	Taxa de Bloqueio com Arma
+1126	Aumento de MP
+1127	Regeneração de MP
+1128	Resistência a Crítico
+1129	Aumento de Dano Crítico
+1130	Absorção de HP
+1131	Fogo
+1132	Vento
+1133	Gelo
+1134	Divino
+1135	Trevas
+1136	Veneno
+1137	Pêndulo
+1138	Geada
+1139	Energia de Cura
+1140	Fanático
+1141	Recuperação Instantânea
+1142	Especialista em Feitiços
+1143	Redução de Aggro
+1144	Resistência a Atordoamento
+1145	Resistência à Água
+1146	Resistência a Cegueira
+1147	Resistência a Medo
+1148	Resistência à Redução de Velocidade de Movimento
+1149	Resistência a Silêncio
+1150	0
+1151	Caos
+1152	Caos Épico
+1167	Criação de Soquete
+1219	Asas de Draco
