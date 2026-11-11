@@ -7,7 +7,7 @@
    - `lang`: idioma do jogo que será trocado pelo PT-BR (padrão `en`; no jogo, selecione esse idioma).
 3. Baixe o artefato `inotia4-build`. O arquivo se chama `inotia4.apk`, `inotia4-mod.apk`,
    `inotia4-ptbr.apk` ou `inotia4-mod-ptbr.apk`, conforme as opções.
-4. Desinstale o original antes (a assinatura muda).
+4. Desinstale o original antes
 
 ## Tradução
 - `translation/texts_en.json`: todos os textos em inglês
