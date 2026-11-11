@@ -7,6 +7,15 @@ on:
         description: "Injetar o mod menu? (false = so mesclar e reassinar, teste de sanidade)"
         type: boolean
         default: true
+      with_translation:
+        description: "Aplicar traducao PT-BR (translation/texts_pt.json)?"
+        type: boolean
+        default: false
+      lang:
+        description: "Idioma do jogo que sera trocado pelo PT-BR (o jogo precisa estar nesse idioma)"
+        type: choice
+        options: [en, fr, de, jp, zhhans, zhhant]
+        default: en
 
 jobs:
   build:
@@ -69,6 +78,10 @@ jobs:
                && java -jar tools/APKEditor.jar m -i work/splits -o work/merged.apk; }
           ls -la work/merged.apk
 
+      - name: Aplicar traducao PT-BR
+        if: ${{ inputs.with_translation }}
+        run: python3 tools/apply_translation.py work/merged.apk translation/texts_pt.json "${{ inputs.lang }}"
+
       - name: Compilar libmodmenu.so (arm64)
         if: ${{ inputs.with_mod }}
         run: |
@@ -126,14 +139,18 @@ jobs:
 
       - name: Alinhar e assinar
         run: |
+          NAME=inotia4
+          if [ "${{ inputs.with_mod }}" = "true" ]; then NAME="$NAME-mod"; fi
+          if [ "${{ inputs.with_translation }}" = "true" ]; then NAME="$NAME-ptbr"; fi
+          echo "OUT=$NAME.apk" >> $GITHUB_ENV
           "$BT/zipalign" -p -f 4 work/final_unsigned.apk work/aligned.apk
           "$BT/apksigner" sign --ks ks/mod.jks --ks-pass pass:"$KS_PASS" --key-pass pass:"$KS_PASS" \
-            --out inotia4-mod.apk work/aligned.apk
-          "$BT/apksigner" verify inotia4-mod.apk
-          ls -la inotia4-mod.apk
+            --out "$NAME.apk" work/aligned.apk
+          "$BT/apksigner" verify "$NAME.apk"
+          ls -la "$NAME.apk"
 
       - uses: actions/upload-artifact@v4
         with:
-          name: inotia4-mod
-          path: inotia4-mod.apk
+          name: inotia4-build
+          path: ${{ env.OUT }}
           compression-level: 0
