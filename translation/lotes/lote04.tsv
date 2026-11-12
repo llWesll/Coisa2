@@ -1,0 +1,500 @@
+1902	Adiciona 'elemento vento' à arma e aumenta a 'chance de ativação do elemento vento'.
+1903	Chance de Ativação do Elemento Vento:
+1909	Aumenta o dano contra inimigos que não atacam.
+1910	Aumento de Ataque:
+1916	Atrai o 'aggro' para o mascote ou personagem com defesa alta quando um ataque é desferido.
+1917	Probabilidade de Ocorrência:
+1923	Aumenta o tempo de invocação do 'companheiro fera' e do 'espírito da natureza'.
+1924	Aumento do Tempo de Invocação:
+1930	Aumenta a 'taxa de crítico' e o 'alcance' durante a emboscada.
+1931	Taxa de Crítico:
+1932	Aumento de Alcance:
+1935	%d pixels
+1937	Avança contra os inimigos e os atordoa por um instante.
+1938	(Dano Físico + Força x1.2) x
+1939	Tempo de Atordoamento:
+1942	%d segundos
+1944	Grita para os inimigos ao redor e reduz a velocidade de movimento e de ataque.
+1945	(Dano Físico + Força + Vitalidade x1.2) x
+1946	Redução de Vel. de Movimento e de Ataque:
+1947	Duração:
+1950	%d segundos
+1951	Após ativar a habilidade, há uma chance de a defesa do inimigo desaparecer por um instante.
+1952	Chance de Impenetrável:
+1953	Duração da Habilidade
+1954	Tempo de Redução de Defesa
+1956	%d segundos
+1957	%d segundos
+1958	Golpeia com força os inimigos ao redor, atordoando-os e causando dano à área.
+1959	(Dano Físico + Força x1.2 + Destreza) x
+1960	Tempo de Atordoamento:
+1963	%d segundos
+1965	Brande a espada ao redor e derruba a arma. A taxa de ataque do inimigo cai pela metade por um tempo.
+1966	(Dano Físico + Força + Destreza x1.2) x
+1967	Duração:
+1970	%d segundos
+1972	Gira a arma rapidamente para atacar.
+1973	(Dano Físico + Força + Destreza x1.2) x
+1979	Aumenta o HP com certa chance ao atacar o inimigo.
+1980	Quantidade de Recuperação: do Dano
+1981	Chance de Ativação:
+1982	Duração:
+1985	%d segundos
+1986	Enfurece e aumenta a 'vida' e a 'velocidade de ataque'.
+1987	Aumento da Vel. de Ataque:
+1988	Aumento de Vida:
+1989	Duração:
+1992	%d segundos
+1993	Aumenta a 'chance de arma secundária', e a taxa de ataque dos membros do grupo aumenta continuamente a cada 2 segundos ao atacar. (Total de 5 vezes)
+1994	Chance de Ativação da Arma Secundária
+1995	Aumento de Ataque:
+1996	Duração:
+1999	%d segundos
+2000	Aumenta o dano ao usar 'chance de ataque da mão esquerda' e 'arma de duas mãos'.
+2001	Chance de Ataque da Mão Esquerda:
+2002	Aumento de Dano:
+2007	Aumenta a resistência física e mágica.
+2008	Resistência a Dano Físico:
+2009	Resistência a Dano Mágico:
+2014	Aumenta o 'efeito de sede de sangue' e concede chance de absorver MP.
+2015	Chance de Ativação da Absorção de HP:
+2016	Capacidade de Absorção de Mana:
+2021	Ao atacar, a taxa de ataque aumenta continuamente com certa chance. (até 5 vezes)
+2022	Aumento de Ataque:
+2023	Chance de Ativação:
+2024	Duração:
+2027	%d segundos
+2028	Ao atacar, o tempo de recarga de todas as habilidades é reiniciado com certa chance.
+2029	Chance de Reiniciar Recarga:
+2030	Chance de Reiniciar (duas mãos):
+2035	Ao atacar, os inimigos próximos também são atacados com certa chance.
+2036	Chance de Ativação:
+2042	Aumenta em 10% a resistência física e mágica quando o HP está abaixo de 30%. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2049	Aumenta em 2% o dano físico e mágico ao usar espada longa. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2056	Aumenta em 10% a defesa ao vestir armadura de metal. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2063	3% de chance de obter um item único ao puxar a espada lendária. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2070	Aumenta em 3% o preço ao vender itens. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2077	3% de chance de atordoar por 1 segundo ao causar crítico. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2084	Aumenta em 3% o dano físico ao vestir armadura de couro. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2091	Aumenta a chance de obter itens melhores ao abrir um baú comum. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2098	Aumenta em 2% o dano mágico. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2105	Aumenta em 3% o dano mágico ao vestir roupas de tecido. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2112	Aumenta em 3% a resistência a dano mágico. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2119	Aumenta em 3% a chance de queda de itens do tipo pergaminho. &N (Habilidade de Mercenário: vale para todos os mercenários)
+2126	O preço dos itens cai 2% ao comprar. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2133	1% de chance de atordoar por 1 segundo ao usar arma contundente. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2140	Aumenta em 2% o ganho de pontos de experiência. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2147	Aumenta a chance de mercenário raro ao recrutar mercenários. &N (Habilidade de Mercenário: vale para todos os mercenários).
+2154	Aumenta em 10% o 'efeito de poção'. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2161	Aumenta em 3% o 'dano físico' ao usar arco. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2168	Aumenta em 5% o dano crítico. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2175	Aumenta em 2% a chance de queda de todos os materiais. &N (Habilidade de Mercenário: vale para todos os mercenários)
+2182	Reduz em 5% a chance de sofrer um estado anormal. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2189	Aumenta em 3% o dano físico ao usar arma de duas mãos. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2196	O tempo de recarga das poções é reduzido em 3 segundos. &N(Habilidade de Mercenário: vale para todos os mercenários).
+2203	Aumenta em 1% a chance de queda de equipamentos. &N(Habilidade de Mercenário: vale para todos os mercenários)
+2210	Arbusto
+2211	Jarro
+2212	Caixa
+2213	Escorpião
+2214	Serpente
+2215	Cacto
+2216	Larva
+2217	Mímico
+2218	Morcego
+2219	Rato
+2220	Aranha
+2221	Lobo
+2222	Slime
+2223	Slime Alado
+2224	Sproot
+2225	Esqueleto
+2226	Livro Voador
+2227	Urso
+2228	Oogle
+2229	Tartaruga
+2230	Tartaruga de Artilharia
+2231	Goblin
+2232	Prisioneiro Zumbi
+2233	Minotauro
+2234	Golem
+2235	Lobisomem
+2236	Mosquito
+2237	Abelhas
+2238	Colmeia
+2239	Fantasma
+2240	Bola de Fogo
+2241	Criatura Amaldiçoada
+2242	Estrada Demoníaca
+2243	Soldado de Berkel
+2244	Arqueiro de Berkel
+2245	Cavaleiro de Berkel
+2246	Sacerdote de Berkel
+2247	Monge Humano
+2248	Soldado Sombrio
+2249	Arqueiro Sombrio
+2250	Cavaleiro Sombrio
+2251	Sacerdote das Sombras
+2252	Monge Sombrio
+2253	Soldado do Deserto
+2254	Assassino do Deserto
+2255	Guerreiro Orc
+2256	Ovos da Criatura Sombria
+2257	Súcubo
+2258	Peão do Inferno
+2259	Companheiro Fera
+2260	Prisioneiro Mutante
+2261	Monstro Misterioso
+2262	Shin
+2263	Soldado Esqueleto Ossudo
+2264	Teste do Sacerdote Humano
+2265	Conde Grafton
+2266	Soldado Enviado de Berkel
+2271	Morcego da Caverna
+2272	Soldado Esqueleto Frágil
+2273	Slime Liso
+2274	Presa-Cinzenta Peluda
+2275	Serpente da Floresta
+2276	Lobo Selvagem
+2277	Sentinela de Arnen
+2278	Tartaruga de Batalha Domada
+2279	Líder da Guarda de Arnen
+2280	Caverna dos Goblins
+2281	Guarda Goblin
+2282	Goblin-Chefe
+2289	Larvas Calcárias
+2290	Aranha da Caverna
+2291	Morcego Vampiro
+2292	Larvas Gordas
+2293	Aranha da Caverna de Bolsa Azul
+2294	Carcereiro Goblin
+2298	Lobisomem-Chefe
+2299	Protetor da Pedra da Pureza
+2300	Cornette
+2301	Lobisomem Gigante
+2302	Slime Alado Rígido
+2303	Cacto Venenoso
+2306	Mestre da Espada
+2307	Rato da Caverna
+2308	Rainha Aranha
+2309	Tarântula Gigante
+2312	Tartaruga do Deserto
+2313	Escorpião da Areia
+2314	Goblin-Chefe Yirzuch
+2315	Cacto Fraco
+2316	Batedor dos Caçadores da Noite
+2320	Peão do Inferno Invocado
+2321	Criatura Amaldiçoada Invocada
+2322	Sacerdote de Berkel Contaminado
+2323	Guarda Lunático
+2324	Abade Mutante
+2325	Livro Voador Bizarro
+2326	Aranha Venenosa
+2327	Lobo Híbrido
+2328	Benukes Rebelde
+2329	Manson, o Zeloso
+2331	Guarda de Arnen
+2337	Ajudante-Geral de Arnen
+2340	Colmeia de Vespas do Deserto
+2341	Escorpião Cinzento
+2342	Morcego de Asas Vermelhas
+2347	Lobo Azul
+2348	Larvas Vorazes
+2349	Mímico Barulhento
+2350	Mímico Astuto
+2351	Djinn Lunático
+2352	Slime Ácido
+2353	Lobo-Chefe Faminto
+2354	Aranha Tarântula
+2355	Tartaruga Jacaré
+2356	Morcego Vampiro Negro
+2357	Rato Selvagem
+2358	Espadachim Goblin Magnatue
+2359	Mímico de Caixa de Aço
+2360	Escorpião Perseguidor da Morte
+2361	Cacto Porco-Espinho
+2362	Jack, o Lobisomem Assassino
+2363	Larvas Famintas
+2364	Lobo Prateado Lendário
+2365	Escrituras Demoníacas
+2366	Urso Pardo Hwagan
+2367	Matador Jurupaz
+2368	Espírito Marcado
+2369	Víbora Mamba Negra
+2370	Ladrão Gunnishe
+2371	Mímico Agressivo
+2372	Serpente do Pântano de Delos
+2373	Chefe dos Bandidos Capuz Vermelho
+2374	Capitão dos Perseguidores de Arnen
+2375	Homens de Ben
+2381	Líder dos Atos Schmitt
+2382	Tartaruga de Batalha Treinada
+2383	Cascavel Negra
+2384	Cacto de Flor Vermelha
+2385	Tartaruga do Pântano
+2386	Criatura Amaldiçoada
+2387	Urso de Garras Vermelhas
+2388	Guarda Orc de Osso
+2389	Chefe da Guarda da Prisão dos Gritos
+2390	Zahad Kuruhatt
+2391	Larvas Gigantes Negras
+2392	Esqueleto Negro
+2393	Esqueleto-Chefe
+2394	Líder da Heresia
+2395	Barão Borgia
+2396	Serpente Vermelha
+2397	Lobo Negro
+2402	Legionário do Inquisidor
+2407	Mímicos da Masmorra
+2408	Livro Mágico Furioso
+2410	Fantasma Cruel
+2411	Mímicos Mordedores
+2412	Tartaruga do Pântano de Nariz Vermelho
+2413	Espião Revelado Duhammel
+2414	Guarda do Forte dos Gritos
+2415	Líder da Guarda do Forte dos Gritos
+2416	Fantasma Amaldiçoado
+2417	Ancestrais Orcs Ressuscitados
+2418	Espírito Enfurecido
+2419	Slime da Fonte Misteriosa
+2420	Mosquitos do Pântano
+2421	Tartarugas de Artilharia Perdidas
+2422	Ratos da Caverna de Dentes de Aço
+2423	Ira do Viajante
+2424	Soldado de Berkel Contaminado
+2425	Soldado de Arnen Contaminado
+2426	Mosquito Sedento de Sangue
+2427	Bandidos Capuz Vermelho
+2428	Arqueiros de Arnen Capturados
+2429	Guarda de Pendrik
+2430	Monge Enviado de Arnen
+2431	Casulos de Larva Gigante Negra
+2432	Serpente da Floresta
+2434	Arbusto Vivo
+2435	Arbusto Vivo Enfurecido
+2436	Sacerdote da Igreja de Berkel
+2437	Sacerdote Sênior Traidor das Sombras
+2438	Guardas de Berkel
+2439	Guardas do Castelo de Berkel
+2440	Guardas Magos de Berkel
+2441	Geyorgk, o Inimigo Cruel
+2444	Criaturas Malignas
+2445	Fantasma Sombrio Corrompido
+2446	Monstros Contaminados
+2447	Portador do Pecado
+2448	Guardião do Princípio
+2449	Ladrões Capuz Negro
+2450	Chefe dos Capuzes Negros
+2451	Morcegos da Mina
+2452	Criatura Abandonada
+2453	Olho do Vigia
+2454	Elementais Contaminados
+2455	Djinn Experimental
+2456	Cascavéis do Deserto
+2457	Ratos do Esgoto
+2458	Larvas Brilhantes
+2459	Goblins de Elite
+2462	Goblins Fedorentos
+2463	Aranhas de Estimação dos Goblins
+2464	Morcegos de Estimação dos Goblins
+2465	Larvas Vampiras
+2466	Slime Úmido da Caverna
+2467	Planta Bizarra da Caverna
+2468	Capitão da Guarda de Arnen
+2469	Morcegos das Sombras
+2470	Morcegos Bêbados de Vinho
+2471	Mosquitos de Agulha Afiada
+2472	Reagentes
+2473	Elementais Invocados
+2474	Prisioneiro
+2480	Prisioneiro Arqueiro
+2483	Chefe dos Capuzes Negros
+2484	Plantas do Pântano
+2485	Serpentes do Pântano
+2486	Slime Úmido
+2488	Rainha Oogle
+2490	Guarda Oogle
+2491	Capitão Batedor dos Perseguidores
+2492	Escorpião Venenoso de Arnen
+2493	Minotauro Invocado
+2494	Aranha do Arbusto Azul
+2495	Capitão da Tripulação da Tempestade de Areia
+2496	Membro da Tripulação da Tempestade de Areia
+2497	Lobisomens Treinados
+2498	Tartarugas de Artilharia de Aço
+2499	Guerreiro Goblin Branco de Elite
+2500	Goblin-Chefe Branco
+2502	Ajudante dos Perseguidores
+2503	Tindalrose
+2504	Membro de Elite dos Perseguidores
+2505	Condenado
+2506	Mosquitos de Agulha Grande
+2507	Slime Calcário
+2508	Flor Carnívora
+2509	Cacto de Neve
+2510	Tartarugas Casco de Gelo
+2511	Aranhas Veneno-Gelo
+2512	Reconhecimento dos Perseguidores
+2514	Aranha da Floresta
+2515	Oogle Enfeitiçado
+2516	Rato da Caverna Enfurecido
+2517	Arqueiro dos Capuzes Negros
+2518	Livro Antigo Encantado
+2521	Morcego de Asa Larga
+2522	Urso Cruel
+2524	Colmeia de Abelhas
+2526	Mosquitos da Floresta
+2527	Alma do Drow
+2528	Alma de Elite do Drow
+2529	Slime Alado Invisível
+2530	Serpente Nevada
+2531	Colmeia de Vespas da Nevasca
+2532	Elementais de Gelo
+2533	Ratos de Dentes Serrilhados
+2534	Morcego de Listras Brancas
+2535	Larvas Comedoras de Orvalho
+2536	Mosquito de Olhos Cinzentos
+2537	Etherin, o Slime Alado
+2538	Minotauro Protetor da Fonte
+2539	Drow-Chefe
+2540	Oogle Acorrentado
+2541	Rainha Oogle Acorrentada
+2542	Ira dos Elfos
+2543	Ira do Arqueiro Élfico
+2544	Golem Guardião
+2545	Soldado dos Perseguidores
+2546	Chefe dos Perseguidores
+2547	Arqueiro dos Perseguidores
+2548	Slime do Campo Nevado
+2549	Serpente do Campo Nevado
+2553	Perseguidor Ganancioso
+2554	Alma do Rei Élfico
+2555	Guarda do Rei Élfico
+2556	Elfo Sênior
+2557	Guardião do Santuário
+2558	Cavaleiro da Família Real
+2559	Alexander
+2560	Dragão Alexander
+2561	Cavaleiro Sombrio
+2562	Urso Pé-Grande
+2563	Darius
+2564	Portia
+2565	Doppelganger
+2566	Forças Sombrias do Mal
+2567	Rato Piolren
+2568	Slime Alado Azul
+2573	Escorpião do Arbusto
+2574	Larvas do Arbusto
+2577	Lobo do Campo Nevado
+2578	Fogo-Fátuo
+2579	Protetor do Selo Élfico
+2580	Servo de Ivan
+2584	Ivan
+2585	Golem Guardião
+2586	Protetor do Selo
+2587	Escorpião do Campo Nevado
+2588	Urso do Campo Nevado
+2589	Lobo da Pradaria
+2590	Morcego Cego
+2591	Espíritos dos Mortos
+2592	Carne dos Mortos
+2593	Colmeia de Vespas Alucinada
+2594	Espírito Sombrio
+2595	Larvas Venenosas
+2596	Tartaruga do Prado
+2597	Urso Pardo do Desfiladeiro
+2598	Víbora Letal
+2599	Guerreiro Goblin Branco
+2600	Guerreiro Goblin Branco Intrépido
+2601	Urso Negro do Prado
+2602	Lobisomem Arredio
+2603	Soldado da Tripulação da Tempestade de Areia
+2604	Arqueiro da Tripulação da Tempestade de Areia
+2605	Tropa da Tripulação da Tempestade de Areia
+2606	Escorpião de Cauda de Gelo
+2607	Lobisomem de Garras de Gelo
+2608	Vigia da Fonte Purificada
+2609	Mímico de Gelo
+2610	Súcubo Selado
+2611	Rato Cinzento
+2612	Tartaruga do Arbusto
+2615	Mosquito de Ferrão Venenoso Branco
+2616	Slime Virulento
+2617	Oogle Vermelho
+2618	Grauple
+2619	Rato de Barba Branca
+2620	Morcego Vampiro
+2621	Súcubo Sedutora
+2622	Larvas de Listras Negras
+2623	Alma Élfica
+2625	Aranha de Agulha de Espinho
+2626	Diário Encantado
+2627	Ovos Mofados
+2629	Minotauro Gêmeo
+2630	Figura Élfica
+2631	Boneca Oogle Móvel
+2632	Livro de Maldições Antigo Proibido
+2633	Guardião Padrão
+2634	Figura de Arqueiro Élfico
+2635	Estátua de Tarântula Móvel
+2636	Oogle Adulto Empalhado Móvel
+2637	Restos de Guerreiro Élfico
+2638	Morcego Lâmina
+2639	Slime Tóxico
+2640	Guardião de Aço
+2641	Guardião de Mithril
+2642	Figura Élfica Divina
+2643	Figura de Arqueiro Élfico Divina
+2644	Soldado de Elite dos Perseguidores
+2645	Arqueiro de Elite dos Perseguidores
+2646	Mascote de Yuhar
+2647	Espírito dos Elfos Ancestrais
+2649	Lobo de Olhos Vermelhos
+2650	Víbora Taipan
+2651	Rosa da Morte
+2652	Soldado das Sombras
+2653	Cavaleiro de Elite das Sombras
+2654	Flagelo Incompleto
+2655	O Amaldiçoado
+2656	Alma Negra
+2657	Guerreiro Sombrio
+2658	Oferendas Sombrias
+2660	Morcego Negro
+2661	Slime Alado Enfurecido
+2662	Arbusto Vivo de Flor Vermelha
+2663	Aranha Venenosa da Floresta
+2665	Víbora de Gelo
+2666	Fogo-Fátuo do Inferno
+2667	Mímico de Gelo de Dentes Afiados
+2668	Grauple Canibal
+2669	Alma do Elfo-Chefe
+2670	Diário Enfurecido
+2672	Criatura Perversa
+2673	Ceifador Sombrio
+2674	Fantasma à Deriva
+2675	Lobo Enfurecido
+2676	Soldado de Berkel Lunático
+2677	Arqueiro de Berkel Lunático
+2678	Aranha Berserk
+2679	Morcego Berserk
+2680	Goblin Contaminado
+2681	Zumbi Mutante
+2682	Conde Lunático
+2683	Goblin-Chefe Contaminado
+2684	Mímico Corroedor de Memória
+2685	Wolrang
+2686	Lobisomem Furioso
+2687	Tartaruga do Deserto Mutante
+2688	Cacto em Chamas
+2689	Sacerdote Sombrio
+2690	Mímico Errante
+2691	Espírito da Neve
+2692	Rato da Neve
+2693	Protetor do Campo Nevado
+2694	Jeff, o Criminoso Procurado
+2695	Escorpião Mutante de Arnen
+2696	Tartaruga Selvagem do Prado
+2697	Guerreiro Goblin Branco Lunático
+2698	Lobisomem Cruel
+2699	Lobisomem Gélido
+2700	Tartaruga Casco de Gelo
