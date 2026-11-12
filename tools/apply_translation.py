@@ -27,7 +27,7 @@ for k, v in T.items():
     if '\x00' in v:
         sys.exit('texto com caractere nulo no indice %s' % k)
     orig = S[i][:-1].decode('utf-8')
-    a, b = collections.Counter(CTRL.findall(orig)), collections.Counter(CTRL.findall(v))
+    a, b = [collections.Counter(c for c in CTRL.findall(t) if c != '&N') for t in (orig, v)]  # &N (quebra) pode variar
     if a != b:
         bad += 1
         fmt = lambda c: sum(n for t, n in c.items() if t in ('%d', '%s'))
