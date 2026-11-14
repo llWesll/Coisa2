@@ -136,7 +136,7 @@ public class ModMenu {
             flags = nativeItemFlags();
         } catch (Throwable t) { names = null; }
         if (names == null || flags == null) {
-            Toast.makeText(a, "Lista de itens indisponivel (textos do jogo ainda nao carregados). Feche e abra o menu.", Toast.LENGTH_LONG).show();
+            Toast.makeText(a, "Lista de itens indisponivel. Feche e abra o menu.", Toast.LENGTH_LONG).show();
             return;
         }
         itemsLoaded = true;
